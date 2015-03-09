@@ -12,7 +12,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Address implements Serializable{
+public class Address   implements Serializable{
 
 	@Id
 	@GeneratedValue
