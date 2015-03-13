@@ -12,14 +12,14 @@ import com.mum.edu.jemaw.model.Product;
 public class ProductDAOImpl extends GenericDAOImpl<Product> implements
 		ProductDAO {
 
-	/*@Override
+	@Override
 	public List<Product> findByName(String name) {
 		Query query = getCurrentSession().createQuery(
 				"from Product p where name LIKE :name");
 		query.setString("name", name + "%");
 		List<Product> productList = query.list();
 		return productList;
-	}*/
+	}
 
 	
 }

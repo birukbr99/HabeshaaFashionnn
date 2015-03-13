@@ -30,7 +30,7 @@ public class AddressController {
 		/**
 		 * Simply selects the home view to render by returning its name.
 		 */
-		@RequestMapping(value = "/", method = RequestMethod.GET)
+		/*@RequestMapping(value = "/", method = RequestMethod.GET)
 		public String home(Locale locale, Model model) {
 			logger.info("Welcome home! The client locale is {}.", locale);
 			
@@ -42,7 +42,7 @@ public class AddressController {
 			model.addAttribute("serverTime", formattedDate );
 			
 			return "home";
-		}
+		}*/
 		
 	
 
