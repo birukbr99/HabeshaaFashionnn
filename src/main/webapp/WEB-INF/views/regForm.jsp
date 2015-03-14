@@ -22,13 +22,10 @@
 
 <div class="add-box">
 <div>
-<h2>Contact Us At</h2>
-W3 Course Web Designing Solution<br/>
-P-4/1, Near Akashpuram
-Pilibhit Road,<br/> Bareilly,Uttar Pradesh, 243001</div>
+<h2>Group</h2>
+Jemaw Group<br/></div>
 <div style="padding-left:40px;">
-<h2>Call Us At</h2>Designer Of Page <a href="http://www.w3course.com/md-ashraf-malik" title="Md Ashraf Malik">"+91-8439203407</a><br/><br/>
-Publisher Of Page <a href="http://www.w3course.com" title="W3 Course">+91-9760849715</a></div>
+</div>
 </div>
 
 <div class="contact-div">
@@ -39,10 +36,19 @@ Publisher Of Page <a href="http://www.w3course.com" title="W3 Course">+91-976084
 <legend>Customer Information</legend>
 
 <form:input path="firstName" class="input input1" />
-<form:errors path="firstName" cssStyle="color : red;" /> <br/>
+<form:errors path="firstName" cssStyle="color : red;" /> 
 
-<form:input path="lastName" class="input input1"   placeholder="Your Phone" />
-<form:errors path="lastName" cssStyle="color : red;" /> 
+<form:input path="lastName" class="input input1"   placeholder="Last Name" />
+<form:errors path="lastName" cssStyle="color : red;" /><br/> 
+
+<form:input path="phoneNumber" class="input input1"   placeholder="Phone Number" />
+<form:errors path="phoneNumber" cssStyle="color : red;" /> 
+
+<form:input path="email" class="input email"   placeholder="Email" />
+<form:errors path="email" cssStyle="color : red;" /> 
+
+<form:input type="date" path="birthDate" class="input date"  />
+<form:errors path="birthDate" cssStyle="color : red;" /> 
 
 <!-- <input type="email" required placeholder="Your Email" class="input email" /><br/>
 <textarea placeholder="Your Massage" id="textarea" class="input tarea" required></textarea><br/>
