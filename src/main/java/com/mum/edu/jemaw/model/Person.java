@@ -2,6 +2,8 @@ package com.mum.edu.jemaw.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -14,10 +16,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-
+@Entity
 public class Person   {
     private static final long serialVersionUID = -908L;
-
+    @Id
 	private long id;
  	@NotEmpty @Size(min=4, max=50, message="{Size.name.validation}")
 	private String firstName;

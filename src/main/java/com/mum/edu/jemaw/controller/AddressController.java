@@ -41,7 +41,7 @@ public class AddressController {
 			
 			model.addAttribute("serverTime", formattedDate );
 			
-			return "home";
+			return "test";
 		}
 		
 	

@@ -31,7 +31,7 @@ Jemaw Group<br/></div>
 <div class="contact-div">
 
 <div class="contact-form">
-<form:form modelAttribute="customer"  action= "addCustomer" method="post">
+<%-- <form:form modelAttribute="customer"  action= "addCustomer" method="post">
 <fieldset>
 <legend>Customer Information</legend>
 
@@ -54,7 +54,7 @@ Jemaw Group<br/></div>
 <textarea placeholder="Your Massage" id="textarea" class="input tarea" required></textarea><br/>
 <input type="reset" id="btn" class="input sbtn"  value="Reset" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <input type="submit" id="btn1" class="input sbtn" value="Send" /> -->
-</form:form>
+</form:form> --%>
 </div>
 
 

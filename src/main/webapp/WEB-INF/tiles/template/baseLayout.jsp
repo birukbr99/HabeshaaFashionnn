@@ -16,17 +16,16 @@
 <link href="http://getbootstrap.com/dist/css/bootstrap.css"	rel="stylesheet">
 
 <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css"	rel="stylesheet">
-
+<link href="<c:url value='/resources/css/navigation.css' />" rel="stylesheet" />
+<script type="text/javascript" src="<c:url value='/resources/javascript/navigation.js' />"></script>
 </head>
 
 <body>
 
 	<div class="container">
 		<div class="header">
-			<ul class="nav nav-pills pull-right">
-				<tiles:insertAttribute name="navigation" />
-			</ul>
-			<h3 class="text-muted">Web Store</h3>
+			<tiles:insertAttribute name="navigation" />
+			
 		</div>
 
 
@@ -49,4 +48,6 @@
 
 	</div>
 </body>
+
+ 
 </html>

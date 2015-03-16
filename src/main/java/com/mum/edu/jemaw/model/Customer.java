@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.validation.Valid;
 @Entity
-public class Customer extends Person implements Serializable {
+public class Customer extends Person  {
 private ShoppingCart shoppingCart;
 @Valid
 private PaymentInfo paymentInfo;

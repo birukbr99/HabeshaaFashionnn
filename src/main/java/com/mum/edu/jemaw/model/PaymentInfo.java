@@ -6,10 +6,11 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.annotations.Entity;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
-
+@javax.persistence.Entity
 public class PaymentInfo implements Serializable {
  @NotEmpty(message="Enter card Number")
  private String cardNumber;
