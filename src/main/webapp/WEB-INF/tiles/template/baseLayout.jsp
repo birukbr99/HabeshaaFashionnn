@@ -13,41 +13,46 @@
 
 <title><tiles:insertAttribute name="title" /></title>
 
-<link href="http://getbootstrap.com/dist/css/bootstrap.css"	rel="stylesheet">
-
-<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css"	rel="stylesheet">
 <link href="<c:url value='/resources/css/navigation.css' />" rel="stylesheet" />
 <script type="text/javascript" src="<c:url value='/resources/javascript/navigation.js' />"></script>
+<link href="<c:url value='/resources/css/layout.css' />" rel="stylesheet" />
+<link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
+
 </head>
 
 <body>
-
-	<div class="container">
-		<div class="header">
-			<tiles:insertAttribute name="navigation" />
-			
+       <div >
+       <p>
+		  <tiles:insertAttribute name="tester" />
+		  </p>
+		</div>
+       <div >
+       <p>
+		  <tiles:insertAttribute name="heading" />
+		  </p>
+		</div>
+		
+		<div>
+		   <p>
+			<tiles:insertAttribute name="navigation" />		
+			</p>	
 		</div>
 
 
-		<div class="jumbotron">
-			<h1>
-				<tiles:insertAttribute name="heading" />
-			</h1>
-			<p>
-				<tiles:insertAttribute name="tagline" />
+		
+
+		<div >
+		<p>
+			<tiles:insertAttribute name="content" />
 			</p>
 		</div>
 
-		<div class="row">
-			<tiles:insertAttribute name="content" />
-		</div>
-
-		<div class="footer">
+		<div >
+		<p>
 			<tiles:insertAttribute name="footer" />
+			</p>
 		</div>
-
-	</div>
+	
 </body>
-
  
 </html>

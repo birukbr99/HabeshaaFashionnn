@@ -1,9 +1,4 @@
-body{
-  margin: 0px;
-  padding: 0px;
-  background: #e74c3c;
-  font-family: 'Lato', sans-serif;
-}
+
 
 h1{
   margin: 2em 0px;
@@ -33,7 +28,7 @@ ul.dropdown{
 ul.dropdown li{ 
   font-weight: bold; 
   float: left; 
-  width: 180px; 
+  width: 25%; 
   position: relative;
   background: #ecf0f1;
 }

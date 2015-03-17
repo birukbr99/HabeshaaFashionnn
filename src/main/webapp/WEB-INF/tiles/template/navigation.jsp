@@ -1,6 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<link href="<c:url value='/resources/css/navigation.css' />" rel="stylesheet" />
-<script type="text/javascript" src="<c:url value='/resources/javascript/navigation.js' />"></script>
+
 
 <ul class="dropdown">
         	<li class="drop"><a href="#">Really Tall Menu</a>
