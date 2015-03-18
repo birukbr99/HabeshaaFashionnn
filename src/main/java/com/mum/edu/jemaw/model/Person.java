@@ -2,52 +2,34 @@ package com.mum.edu.jemaw.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.format.annotation.DateTimeFormat;
-
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Person   {
-    private static final long serialVersionUID = -908L;
-    @Id
-	private long id;
- 	@NotEmpty @Size(min=4, max=50, message="{Size.name.validation}")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Person {
+	@Id
+	@Column(name = "person_id")
+	@GeneratedValue
+	private Long id;
 	private String firstName;
-	@NotEmpty(message="Enter the last name")
 	private String lastName;
-	@Pattern(regexp="\\d{3}-\\d{3}-\\d{4}",message="{Pattern.phoneNumber}")
 	private String phoneNumber;
-	@NotEmpty 
-	@Email
 	private String email;
-	
-	
-	private Date birthDate;
-	private int salaryLevel;
-	
-	@Valid
+	private Date dob;
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
-
-	public Address getAddress() {
-		return address;
-	}
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-	public long getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -68,24 +50,24 @@ public class Person   {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getBirthDate() {
-		return birthDate;
+	public Date getDob() {
+		return dob;
 	}
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
-	public int getSalaryLevel() {
-		return salaryLevel;
+	public Address getAddress() {
+		return address;
 	}
-	public void setSalaryLevel(int salaryLevel) {
-		this.salaryLevel = salaryLevel;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
+	
 }

@@ -54,7 +54,7 @@ public class RegistrationController {
 		}
 		
 
-		customerService.saveCustomer(customer);
+		//customerService.saveCustomer(customer);
 		
 	    model.addAttribute("customer", customer);
 	    
