@@ -16,16 +16,8 @@ public class HomeController {
 
 	@RequestMapping({"/","/welcome"})
 	public String welcome(HttpServletRequest request,HttpServletResponse response, Locale locale) {
-		// Her's how to Manually set Locale
-	//	RequestContextUtils.getLocaleResolver(request).setLocale(request, response, Locale.ENGLISH);
 		
-		String origMessage = 
-	            (String)request.getAttribute("javax.servlet.error.message");
-		System.out.printf("MESSAGE:  %s\n",origMessage);
-
-  		System.out.printf("WELCOME AGAIN %s in %s\n","Kemosabe!",locale.getDisplayLanguage());
-
-		return "welcome";
+			return "welcome";
 	}
 	
 	@RequestMapping("/welcome/greeting")

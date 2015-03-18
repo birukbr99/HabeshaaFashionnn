@@ -11,6 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -25,16 +26,18 @@ public class Person {
 	@Column(name = "person_id")
 	@GeneratedValue
 	private Long id;
-	@NotEmpty(message="{NotEmpty}")
+	@NotEmpty(message="Enter the first name")
 	private String firstName;
-	@NotEmpty(message="{NotEmpty}")
+	@NotEmpty(message="Enter the last name")
 	private String lastName;
 	@Pattern(regexp="\\d{3}-\\d{7}", message="{PhoneNumber.validation}")
 	private String phoneNumber;
-	@Email
+	@NotEmpty(message="Enter email address")
+	@Email(message="{Email.validation}")
 	private String email;
-	@DateTimeFormat(pattern = "mm/dd/yyyy")
-	private Date dob;
+	@Past(message="Date of birth can not be in future")
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private Date dob;
 	@OneToOne(cascade = CascadeType.ALL)
 	@Valid
 	private Address address;

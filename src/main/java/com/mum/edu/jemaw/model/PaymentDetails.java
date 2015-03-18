@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -21,17 +22,16 @@ public class PaymentDetails implements Serializable {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@NotEmpty(message="{NotEmpty}")
+	@NotEmpty(message="Enter Owner Name")
 	private String ownerName;
-	@NotEmpty(message="{NotEmpty}")
+	@NotEmpty(message="Enter Card Number")
 	private String cardNumber;
-	@NotNull(message="{NotNull}")
-	@DateTimeFormat(pattern = "mm/dd/yyyy")
+	@Past(message="Expiry date can not be in future")
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date exipryDate;
 	@Digits(fraction = 0, integer = 6, message="{Digits.validation}")
 	private int cvv;
-	@OneToOne(cascade = CascadeType.ALL)
-	private Address billingAddress;
+	
 	
 	public Long getId() {
 		return id;
@@ -63,12 +63,8 @@ public class PaymentDetails implements Serializable {
 	public void setCvv(int cvv) {
 		this.cvv = cvv;
 	}
-	public Address getBillingAddress() {
-		return billingAddress;
-	}
-	public void setBillingAddress(Address billingAddress) {
-		this.billingAddress = billingAddress;
-	}
+	
+	
 	
 	
 

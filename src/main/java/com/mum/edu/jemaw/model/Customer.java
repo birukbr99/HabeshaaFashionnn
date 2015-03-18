@@ -26,6 +26,8 @@ public class Customer extends Person implements Serializable {
 	@OneToMany
 	@JoinColumn(name="customer_id")
 	private List<Order> orders;
+	@Valid
+	private WebUser webuser;
 	
 	public Customer() {
 		

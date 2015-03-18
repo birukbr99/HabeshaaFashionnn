@@ -9,10 +9,17 @@ import com.mum.edu.jemaw.dao.CustomerDAO;
 import com.mum.edu.jemaw.dao.GenericDAO;
 import com.mum.edu.jemaw.model.Customer;
 import com.mum.edu.jemaw.service.CustomerService;
-
+ 
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService{
 
+	@Autowired
+	private CustomerDAO customerDAO;
+	
+	public void saveCustomer(Customer customer){
+		customerDAO.save(customer);
+	}
+	
 	
 }

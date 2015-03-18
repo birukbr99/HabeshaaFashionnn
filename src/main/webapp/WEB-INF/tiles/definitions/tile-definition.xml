@@ -18,7 +18,7 @@
  		<put-attribute name="content" value="/WEB-INF/views/regForm.jsp" />
 	</definition>
 	
-	<!-- <definition name="products" extends="baseLayout">
+	<!-- <definition name="welcome" extends="baseLayout">
 		<put-attribute name="title" value="Products" />
 		<put-attribute name="heading" value="Products" />
 		<put-attribute name="tagline" value="Available Products" />

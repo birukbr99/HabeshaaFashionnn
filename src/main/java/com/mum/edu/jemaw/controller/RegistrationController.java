@@ -1,6 +1,5 @@
 package com.mum.edu.jemaw.controller;
 
-import java.beans.PropertyEditorSupport;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,9 +15,13 @@ import javax.validation.Valid;
 
 
 
+
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -54,7 +57,7 @@ public class RegistrationController {
 		}
 		
 
-		//customerService.saveCustomer(customer);
+		customerService.saveCustomer(customer);
 		
 	    model.addAttribute("customer", customer);
 	    
@@ -63,7 +66,7 @@ public class RegistrationController {
 	}
 	
 	
-	@InitBinder
+/*	@InitBinder
     public void initBinder(WebDataBinder binder) {
 //         binder.setDisallowedFields("id");
 //        binder.setRequiredFields("username", "password", "emailAddress");
@@ -72,7 +75,7 @@ public class RegistrationController {
             @Override
             public void setAsText(String text) {
                Date date=new Date();
-               SimpleDateFormat sdf=new SimpleDateFormat("mm/dd/yyyy");
+               SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
                 try {
 					setValue(sdf.parse(text));
 				} catch (ParseException e) {
@@ -82,5 +85,15 @@ public class RegistrationController {
             }
         });
        
-    }
+    }*/
+	
+	@InitBinder
+	public void allowEmptyDateBinding( WebDataBinder binder )
+	{
+	    // tell spring to set empty values as null instead of empty string.
+	    binder.registerCustomEditor( String.class, new StringTrimmerEditor( true ));
+	    SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+	    simpleDateFormat.setLenient(false);
+	    binder.registerCustomEditor( Date.class, new CustomDateEditor( simpleDateFormat,false));	   
+	}
 }

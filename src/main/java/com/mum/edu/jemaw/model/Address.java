@@ -6,6 +6,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -19,15 +20,18 @@ public class Address   implements Serializable{
 	@Id
 	@GeneratedValue
 	private Long id;
-	@NotEmpty
+	@NotEmpty(message="Enter street")
 	private String street;
-	@Pattern(regexp="\\w{3,25}", message="{City.validation}")
+	@NotEmpty(message="Enter city")
+	@Pattern(regexp="\\w{3,25}", message="{Location.validation}")
 	private String city;
-	@Pattern(regexp="\\w{3,25}", message="{State.validation}")
+	@NotEmpty(message="Enter state")
+	@Pattern(regexp="\\w{3,25}", message="{Location.validation}")
 	private String state;
-	@NotEmpty
+	@NotEmpty(message="Enter zip")
+	@Digits(integer=4,message="Enter valid zip code", fraction = 0)
 	private String zip;
-	@NotEmpty
+	@NotEmpty(message="Enter country name")
 	private String country;
 	
 
