@@ -9,15 +9,14 @@ import com.mum.edu.jemaw.dao.ShoppingCartDAO;
 import com.mum.edu.jemaw.model.ShoppingCart;
 
 @Service("shoppingCartService")
-public class ShoppingCartServiceImpl extends GenericServiceImpl<ShoppingCart>{
+public class ShoppingCartServiceImpl {
 
 	@Autowired
 	@Qualifier("shoppingCartDAO")
 	public ShoppingCartDAO shoppingCart;
 	
-	@Override
-	protected GenericDAO getDAO() {
+	protected ShoppingCart getDAO(Long id) {
 		// TODO Auto-generated method stub
-		return shoppingCart;
+		return shoppingCart.findOne(id);
 	}
 }

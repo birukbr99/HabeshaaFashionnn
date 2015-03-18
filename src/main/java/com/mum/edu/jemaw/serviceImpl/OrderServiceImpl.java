@@ -11,16 +11,16 @@ import com.mum.edu.jemaw.service.OrderService;
 
 
 @Service("orderService")
-public class OrderServiceImpl extends GenericServiceImpl<Order> implements OrderService{
+public class OrderServiceImpl {
 
 	@Autowired
 	@Qualifier("orderDAO")
 	public OrderDAO orderDAO;
 	
 	
-	@Override
-	protected GenericDAO getDAO() {
+	
+	protected Order getDAO(Long id) {
 		// TODO Auto-generated method stub
-		return orderDAO;
+		return orderDAO.findOne(id);
 	}
 }

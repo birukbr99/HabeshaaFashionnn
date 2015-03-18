@@ -11,15 +11,14 @@ import com.mum.edu.jemaw.service.PaymentInfoService;
 
 
 @Service("paymentInfoService")
-public class PaymentInfoServiceImpl  extends GenericServiceImpl<PaymentInfo> implements PaymentInfoService {
+public class PaymentInfoServiceImpl  {
 
 	@Autowired
 	@Qualifier("paymentInfoDAO")
 	public PaymentInfoDAO paymentInfoDAO;
 	
-	@Override
-	protected GenericDAO getDAO() {
+	protected PaymentInfo getDAO(Long id) {
 		// TODO Auto-generated method stub
-		return paymentInfoDAO;
+		return paymentInfoDAO.findOne(id);
 	}
 }

@@ -10,14 +10,14 @@ import com.mum.edu.jemaw.model.Customer;
 import com.mum.edu.jemaw.service.CustomerService;
 
 @Service("customerService")
-public class CustomerServiceImpl extends GenericServiceImpl<Customer> implements CustomerService{
+public class CustomerServiceImpl {
 
 	@Autowired
 	@Qualifier("customerDAO")
 	public CustomerDAO customerDAO;
 
-	@Override
-	protected GenericDAO getDAO() {
-		return customerDAO;
+	
+	protected Customer getDAO(Long id) {
+		return customerDAO.findOne(id);
 	}
 }

@@ -13,15 +13,14 @@ import com.mum.edu.jemaw.service.LineItemService;
 
 
 @Service("lineItemService")
-public class LineItemServiceImpl extends GenericServiceImpl<LineItem> {
+public class LineItemServiceImpl  {
 
 	@Autowired
 	@Qualifier("lineItemDAO")
 	public LineItemDAO lineItemDAO;
 	
-	@Override
-	protected GenericDAO getDAO() {
+	protected LineItem getDAO(Long id) {
 		// TODO Auto-generated method stub
-		return lineItemDAO;
+		return lineItemDAO.findOne(id);
 	}
 }

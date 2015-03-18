@@ -11,15 +11,14 @@ import com.mum.edu.jemaw.service.AddressService;
 
 
 @Service("addressService")
-public class AddressServiceImpl extends GenericServiceImpl<Address> implements AddressService{
+public class AddressServiceImpl {
 	
 	@Autowired
 	@Qualifier("addressDAO")
 	public AddressDAO addressDAO;
 
-	@Override
-	protected GenericDAO getDAO() {
-		return addressDAO;
+	protected Address getDAO(Long id) {
+		return  addressDAO.findOne(id);
 	}
 
 

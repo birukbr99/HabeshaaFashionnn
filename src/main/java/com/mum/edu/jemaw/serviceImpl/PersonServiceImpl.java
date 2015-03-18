@@ -11,16 +11,16 @@ import com.mum.edu.jemaw.service.PersonService;
 
 
 @Service("personService")
-public class PersonServiceImpl extends GenericServiceImpl<Person> implements
-PersonService {
+public class PersonServiceImpl {
 
 @Autowired
 @Qualifier("personDAO")
 public PersonDAO personDAO;
 
-@Override
-protected GenericDAO getDAO() {
-return personDAO;
+protected Person getDAO(Long id) {
+return personDAO.findOne(id);
 }
+
+
 
 }

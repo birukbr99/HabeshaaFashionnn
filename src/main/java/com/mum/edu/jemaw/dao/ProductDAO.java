@@ -10,4 +10,5 @@ import com.mum.edu.jemaw.model.Product;
 public interface ProductDAO extends JpaRepository<Product,Long>{
 
 	List<Product> findByName(String name);
+	
 }

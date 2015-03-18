@@ -1,24 +1,39 @@
 package com.mum.edu.jemaw.controller;
 
+import java.util.Locale;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 @Controller
 public class HomeController {
 
-	/*@Autowired
-	private ProductService productService;*/
-	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String clientHome(Model model) {
-		/*List<Product> searchResult = productService.findAll();
-		model.addAttribute("productList", searchResult);*/
-		return "/HomePage";
+	@RequestMapping({"/","/HomePage"})
+	public String welcome(HttpServletRequest request,HttpServletResponse response, Locale locale) {
+		// Her's how to Manually set Locale
+	//	RequestContextUtils.getLocaleResolver(request).setLocale(request, response, Locale.ENGLISH);
+		/*
+		String origMessage = 
+	            (String)request.getAttribute("javax.servlet.error.message");
+		System.out.printf("MESSAGE:  %s\n",origMessage);
+
+  		System.out.printf("WELCOME AGAIN %s in %s\n","Kemosabe!",locale.getDisplayLanguage());*/
+
+		return "HomePage";
 	}
 	
+	@RequestMapping("/HomePage/greeting")
+	public String greeting(Model model) {
+		model.addAttribute("greeting", "Welcome to Web Store!");
+		model.addAttribute("tagline", "The one and only amazing web store");
+		
+
+		return "HomePage";
+	}
 }

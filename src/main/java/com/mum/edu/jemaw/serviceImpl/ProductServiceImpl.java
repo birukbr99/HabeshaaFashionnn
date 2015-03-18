@@ -12,22 +12,25 @@ import com.mum.edu.jemaw.model.Product;
 import com.mum.edu.jemaw.service.ProductService;
 
 @Service("productService")
-public class ProductServiceImpl extends GenericServiceImpl<Product> implements ProductService{
+public class ProductServiceImpl {
 
 	@Autowired
 	@Qualifier("productDAO")
 	public ProductDAO productDAO;
 	
-	@Override
-	protected GenericDAO getDAO() {
+	protected Product getDAO(Long id) {
 		// TODO Auto-generated method stub
-		return productDAO;
+		return productDAO.findOne(id);
 	}
 
-	@Override
 	public List<Product> findByName(String name) {
 		// TODO Auto-generated method stub
 		return productDAO.findByName(name);
+	}
+	
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return productDAO.findAll();
 	}
 
 }

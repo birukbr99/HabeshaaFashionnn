@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlTransient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Product implements Serializable{
@@ -19,6 +22,10 @@ public class Product implements Serializable{
 	private int onSale;
 	private String description;
 	private Date creationDate;
+	
+	@JsonIgnore 
+	private MultipartFile  productImage;
+
 	
 	public Long getId() {
 		return id;
@@ -58,4 +65,17 @@ public class Product implements Serializable{
 	}
 	
 	
+	
+	@XmlTransient  
+	public MultipartFile getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(MultipartFile productImage) {
+		this.productImage = productImage;
+	
+	}
 }
+
+
+
