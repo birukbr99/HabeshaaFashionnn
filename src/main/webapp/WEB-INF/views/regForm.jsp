@@ -83,21 +83,24 @@
 				
 				<fieldset>
 					<legend>Login Information</legend>
-					<label>Username</label>					
-					  <form:input path="username" class="input input1"
+					  <form:input path="webUser.username" class="input input1"
 						placeholder="Owner Name" />
-					<form:errors path="username" cssStyle="error" />
+					<form:errors path="webUser.username" cssStyle="error" />
 
-					<label>Password</label>
-					<form:input path="password" class="input input1"
+					<label>Card Number</label>
+					<form:input path="webUser.password" class="input input1"
 						placeholder="Card Number" />
-					<form:errors path="password" cssStyle="error" />
-				</fieldset> 
+					<form:errors path="webUser.p" cssStyle="error" />
+				</fieldset>
 
 				<input type="reset" id="btn" class="input sbtn" value="Reset" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <input type="submit" id="btn1" class="input sbtn" value="Submit" />
 			</form:form>
 		</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 0cd6252... Test
 
 
 	</div>

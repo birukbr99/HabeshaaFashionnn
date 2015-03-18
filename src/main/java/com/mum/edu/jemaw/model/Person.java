@@ -47,6 +47,7 @@ public class Person {
 	@NotEmpty(message="Enter Password")
 	@Size(min=6,max=10,message="Password must be between 8 and 10")
 	private String password;
+<<<<<<< HEAD
 	
 	
 	public String getUsername() {
@@ -62,9 +63,8 @@ public class Person {
 		this.password = password;
 	}
 	
-	
-	
-	
+=======
+>>>>>>> parent of 0cd6252... Test
 	
 	public Long getId() {
 		return id;

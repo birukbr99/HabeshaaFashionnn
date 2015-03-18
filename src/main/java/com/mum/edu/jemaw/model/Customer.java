@@ -26,7 +26,20 @@ public class Customer extends Person implements Serializable {
 	@OneToMany
 	@JoinColumn(name="customer_id")
 	private List<Order> orders;
+	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="webUser_id")
+	@Valid
+	private WebUser webUser;
 	
+	
+
+	public WebUser getWebUser() {
+		return webUser;
+	}
+
+	public void setWebuser(WebUser webuser) {
+		this.webUser = webuser;
+	}
 
 	public Customer() {
 		
