@@ -80,6 +80,18 @@
 					<br />
 
 				</fieldset>
+				
+				<fieldset>
+					<legend>Payment Details</legend>
+					  <form:input path="webuser.username" class="input input1"
+						placeholder="Owner Name" />
+					<form:errors path="webUser.username" cssStyle="error" />
+
+					<label>Card Number</label>
+					<form:input path="webuser.password" class="input input1"
+						placeholder="Card Number" />
+					<form:errors path="webuser.p" cssStyle="error" />
+				</fieldset>
 
 				<input type="reset" id="btn" class="input sbtn" value="Reset" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <input type="submit" id="btn1" class="input sbtn" value="Submit" />
