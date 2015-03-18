@@ -37,11 +37,50 @@ Jemaw Group<br/></div>
 
 <form:input type="date" path="birthDate" class="input date"  />
 <form:errors path="birthDate" cssStyle="color : red;" /> 
+</fieldset>
 
-<input type="email" required placeholder="Your Email" class="input email" /><br/>
-<textarea placeholder="Your Massage" id="textarea" class="input tarea" required></textarea><br/>
+<fieldset>
+<legend>Address Information</legend>
+
+<form:input path="customer.zip" class="input date" placeholder="Zip" />
+<form:errors path="customer.zip" cssStyle="color : red;" /> 
+
+<form:input path="customer.street" class="input input1" placeholder="Street"/>
+<form:errors path="customer.street" cssStyle="color : red;" /> 
+
+<form:input path="customer.city" class="input input1"   placeholder="City" />
+<form:errors path="customer.city" cssStyle="color : red;" /><br/> 
+
+<form:input path="customer.state" class="input input1"   placeholder="State" />
+<form:errors path="customer.state" cssStyle="color : red;" /> 
+
+<form:input path="customer.country" class="input email"   placeholder="Country" />
+<form:errors path="customer.country" cssStyle="color : red;" /> 
+
+</fieldset>
+
+<fieldset>
+<legend>Payment Details</legend>
+
+<form:input path="customer.ownerName" class="input input1" placeholder="Owner Name" />
+<form:errors path="customer.ownerName" cssStyle="color : red;" /> 
+
+<form:input path="customer.billingAddress" class="input input1" placeholder="Billing Address"/>
+<form:errors path="customer.billingAddress" cssStyle="color : red;" /> 
+
+<form:input path="customer.cardNumber" class="input input1"   placeholder="Card Number" />
+<form:errors path="customer.cardNumber" cssStyle="color : red;" /><br/> 
+
+<form:input path="customer.cvv" class="input input1"   placeholder="CVV" />
+<form:errors path="customer.cvv" cssStyle="color : red;" /> 
+
+<form:input path="customer.exipryDate" type="Date" class="input date"   placeholder="Expiry Date" />
+<form:errors path="customer.exipryDate" cssStyle="color : red;" /> 
+
+</fieldset>
+
 <input type="reset" id="btn" class="input sbtn"  value="Reset" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <input type="submit" id="btn1" class="input sbtn" value="Send" /> 
+ <input type="submit" id="btn1" class="input sbtn" value="Submit" /> 
 </form:form>
 </div>
 
