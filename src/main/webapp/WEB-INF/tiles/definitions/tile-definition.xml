@@ -12,7 +12,7 @@
 		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
 	</definition>
 
- 	<definition name="register" extends="baseLayout">
+ 	<definition name="test" extends="baseLayout">
 		<put-attribute name="title" value="Home" />
 		<!-- <put-attribute name="heading" value="/WEB-INF/views/header.jsp" /> -->
  		<put-attribute name="content" value="/WEB-INF/views/regForm.jsp" />

@@ -42,7 +42,7 @@ public class RegistrationController {
 	
 	@RequestMapping(value="/register")
 	public String addCustomer(Customer customer) {
-		return "regForm";
+		return "register";
 	}
 
 	@RequestMapping(value="/addCustomer")
