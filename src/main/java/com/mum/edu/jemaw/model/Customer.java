@@ -18,15 +18,15 @@ public class Customer extends Person implements Serializable {
 
 	@OneToOne(cascade=CascadeType.ALL)
 	private ShoppingCart shoppingCart;
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="customer_id")
-	private List<PaymentInfo> paymentDetails;
+	private PaymentDetails paymentDetails;
 	@OneToMany
 	@JoinColumn(name="customer_id")
 	private List<Order> orders;
 	
 	public Customer() {
-		paymentDetails = new ArrayList<PaymentInfo>();
+		
 		this.shoppingCart = new ShoppingCart();
 	}
 
@@ -38,11 +38,11 @@ public class Customer extends Person implements Serializable {
 		this.shoppingCart = shoppingCart;
 	}
 
-	public List<PaymentInfo> getPaymentDetails() {
+	public PaymentDetails getPaymentDetails() {
 		return paymentDetails;
 	}
 
-	public void setPaymentDetails(List<PaymentInfo> paymentDetails) {
+	public void setPaymentDetails(PaymentDetails paymentDetails) {
 		this.paymentDetails = paymentDetails;
 	}
 

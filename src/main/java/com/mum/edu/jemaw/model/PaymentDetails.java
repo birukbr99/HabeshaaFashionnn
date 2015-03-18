@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class PaymentInfo implements Serializable {
+public class PaymentDetails implements Serializable {
 	
 	@Id
 	@GeneratedValue

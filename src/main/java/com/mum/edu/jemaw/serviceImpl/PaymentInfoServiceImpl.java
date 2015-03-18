@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mum.edu.jemaw.dao.GenericDAO;
 import com.mum.edu.jemaw.dao.PaymentInfoDAO;
-import com.mum.edu.jemaw.model.PaymentInfo;
+import com.mum.edu.jemaw.model.PaymentDetails;
 import com.mum.edu.jemaw.service.PaymentInfoService;
 
 

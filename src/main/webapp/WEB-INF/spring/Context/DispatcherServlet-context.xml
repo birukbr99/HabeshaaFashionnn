@@ -10,7 +10,7 @@
 
 	<mvc:annotation-driven  validator="validator"/>
 	
-	<context:component-scan base-package="com.mum.edu.jemaw.conroller" />
+	<context:component-scan base-package="com.mum.edu.jemaw.controller" />
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />

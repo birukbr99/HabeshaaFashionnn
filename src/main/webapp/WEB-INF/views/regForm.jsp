@@ -35,47 +35,47 @@ Jemaw Group<br/></div>
 <form:input path="email" class="input email"   placeholder="Email" />
 <form:errors path="email" cssStyle="color : red;" /> 
 
-<form:input type="date" path="birthDate" class="input date"  />
-<form:errors path="birthDate" cssStyle="color : red;" /> 
+<form:input type="date" path="dob" class="input date"  />
+<form:errors path="dob" cssStyle="color : red;" /> 
 </fieldset>
 
 <fieldset>
 <legend>Address Information</legend>
 
-<form:input path="customer.zip" class="input date" placeholder="Zip" />
-<form:errors path="customer.zip" cssStyle="color : red;" /> 
+<form:input path="address.zip" class="input date" placeholder="Zip" />
+<form:errors path="address.zip" cssStyle="color : red;" /> 
 
-<form:input path="customer.street" class="input input1" placeholder="Street"/>
-<form:errors path="customer.street" cssStyle="color : red;" /> 
+<form:input path="address.street" class="input input1" placeholder="Street"/>
+<form:errors path="address.street" cssStyle="color : red;" /> 
 
-<form:input path="customer.city" class="input input1"   placeholder="City" />
-<form:errors path="customer.city" cssStyle="color : red;" /><br/> 
+<form:input path="address.city" class="input input1"   placeholder="City" />
+<form:errors path="address.city" cssStyle="color : red;" /><br/> 
 
-<form:input path="customer.state" class="input input1"   placeholder="State" />
-<form:errors path="customer.state" cssStyle="color : red;" /> 
+<form:input path="address.state" class="input input1"   placeholder="State" />
+<form:errors path="address.state" cssStyle="color : red;" /> 
 
-<form:input path="customer.country" class="input email"   placeholder="Country" />
-<form:errors path="customer.country" cssStyle="color : red;" /> 
+<form:input path="address.country" class="input email"   placeholder="Country" />
+<form:errors path="address.country" cssStyle="color : red;" /> 
 
 </fieldset>
 
 <fieldset>
 <legend>Payment Details</legend>
 
-<form:input path="customer.ownerName" class="input input1" placeholder="Owner Name" />
-<form:errors path="customer.ownerName" cssStyle="color : red;" /> 
+<form:input path="paymentDetails.ownerName" class="input input1" placeholder="Owner Name" />
+<form:errors path="paymentDetails.ownerName" cssStyle="color : red;" /> 
 
-<form:input path="customer.billingAddress" class="input input1" placeholder="Billing Address"/>
-<form:errors path="customer.billingAddress" cssStyle="color : red;" /> 
+<form:input path="paymentDetails.billingAddress" class="input input1" placeholder="Billing Address"/>
+<form:errors path="paymentDetails.billingAddress" cssStyle="color : red;" /> 
 
-<form:input path="customer.cardNumber" class="input input1"   placeholder="Card Number" />
-<form:errors path="customer.cardNumber" cssStyle="color : red;" /><br/> 
+<form:input path="paymentDetails.cardNumber" class="input input1"   placeholder="Card Number" />
+<form:errors path="paymentDetails.cardNumber" cssStyle="color : red;" /><br/> 
 
-<form:input path="customer.cvv" class="input input1"   placeholder="CVV" />
-<form:errors path="customer.cvv" cssStyle="color : red;" /> 
+<form:input path="paymentDetails.cvv" class="input input1"   placeholder="CVV" />
+<form:errors path="paymentDetails.cvv" cssStyle="color : red;" /> 
 
-<form:input path="customer.exipryDate" type="Date" class="input date"   placeholder="Expiry Date" />
-<form:errors path="customer.exipryDate" cssStyle="color : red;" /> 
+<form:input path="paymentDetails.exipryDate" type="Date" class="input date"   placeholder="Expiry Date" />
+<form:errors path="paymentDetails.exipryDate" cssStyle="color : red;" /> 
 
 </fieldset>
 
