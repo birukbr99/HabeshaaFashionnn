@@ -41,6 +41,12 @@ public class Person {
 	@OneToOne(cascade = CascadeType.ALL)
 	@Valid
 	private Address address;
+	@NotEmpty(message="Enter Usernamce")
+	@Size(min=6,max=10,message="Username must be between 6 and 10")
+	private String username;
+	@NotEmpty(message="Enter Password")
+	@Size(min=6,max=10,message="Password must be between 8 and 10")
+	private String password;
 	
 	public Long getId() {
 		return id;

@@ -29,14 +29,16 @@ public class Customer extends Person implements Serializable {
 	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="webUser_id")
 	@Valid
-	private WebUser webuser;
+	private WebUser webUser;
 	
-	public WebUser getWebuser() {
-		return webuser;
+	
+
+	public WebUser getWebUser() {
+		return webUser;
 	}
 
 	public void setWebuser(WebUser webuser) {
-		this.webuser = webuser;
+		this.webUser = webuser;
 	}
 
 	public Customer() {
