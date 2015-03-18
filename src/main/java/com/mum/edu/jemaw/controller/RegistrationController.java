@@ -66,26 +66,7 @@ public class RegistrationController {
 	}
 	
 	
-/*	@InitBinder
-    public void initBinder(WebDataBinder binder) {
-//         binder.setDisallowedFields("id");
-//        binder.setRequiredFields("username", "password", "emailAddress");
-      
-     binder.registerCustomEditor(Person.class, new PropertyEditorSupport() {
-            @Override
-            public void setAsText(String text) {
-               Date date=new Date();
-               SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-                try {
-					setValue(sdf.parse(text));
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-            }
-        });
-       
-    }*/
+
 	
 	@InitBinder
 	public void allowEmptyDateBinding( WebDataBinder binder )

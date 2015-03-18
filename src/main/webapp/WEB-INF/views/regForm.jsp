@@ -98,7 +98,6 @@
  <input type="submit" id="btn1" class="input sbtn" value="Submit" />
 			</form:form>
 		</div>
-"src/main/java/com/mum/edu/jemaw/model/Address.java"
 
 
 	</div>
