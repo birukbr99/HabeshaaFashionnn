@@ -54,6 +54,14 @@ public class ShoppingCart implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	public void addCartItem(LineItem item) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void removeCartItem(LineItem lineItem) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

@@ -23,12 +23,19 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public void save(Customer customer) {
-		customerDAO.(customer);
+		customerDAO.saveAndFlush(customer);
 		
 	}
 
 	@Override
-	public void update(Customer customer) {
+	public Customer update(Customer customer) {
+		return customer;
+	}
+
+	@Override
+	public Customer findOne(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

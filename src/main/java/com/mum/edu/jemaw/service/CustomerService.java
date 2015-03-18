@@ -9,5 +9,6 @@ public interface CustomerService {
 
 	public void saveCustomer(Customer customer);
 	public void save(Customer customer);
-	public void update(Customer customer);
+	public Customer update(Customer customer);
+	public Customer findOne(Long id);
 }

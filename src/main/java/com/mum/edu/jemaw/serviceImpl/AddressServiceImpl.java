@@ -1,5 +1,7 @@
 package com.mum.edu.jemaw.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,12 @@ import com.mum.edu.jemaw.service.AddressService;
 @Service
 @Transactional
 public class AddressServiceImpl  implements AddressService{
+
+	@Override
+	public List<Address> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

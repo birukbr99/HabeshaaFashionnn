@@ -4,11 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
-import com.onlinebazzar.model.ShoppingCart;
+
+import com.mum.edu.jemaw.model.ShoppingCart;
+
+
 
 @Controller
-@SessionAttributes({ "shoppingCart"})
 public class LoginController {
 	
 	/**
