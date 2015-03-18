@@ -99,9 +99,13 @@
 		</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of 0cd6252... Test
+=======
+"src/main/java/com/mum/edu/jemaw/model/Address.java"
+>>>>>>> parent of d2a2f88... Test
 =======
 "src/main/java/com/mum/edu/jemaw/model/Address.java"
 >>>>>>> parent of d2a2f88... Test
