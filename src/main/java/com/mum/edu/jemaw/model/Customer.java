@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
+import javax.validation.Valid;
 
 @Entity
 @PrimaryKeyJoinColumn(name="person_id")
@@ -20,6 +21,7 @@ public class Customer extends Person implements Serializable {
 	private ShoppingCart shoppingCart;
 	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="customer_id")
+	@Valid
 	private PaymentDetails paymentDetails;
 	@OneToMany
 	@JoinColumn(name="customer_id")

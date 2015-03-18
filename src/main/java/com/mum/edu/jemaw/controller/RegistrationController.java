@@ -50,7 +50,7 @@ public class RegistrationController {
 			Model model) {
  		
 		if (bindingResult.hasErrors()) {
-			return "regForm";
+			return "register";
 		}
 		
 

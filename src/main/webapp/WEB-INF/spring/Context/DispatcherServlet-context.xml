@@ -30,7 +30,11 @@
    		<property name="basename" value="messages"/> 
 	</bean>
 	
-	 <mvc:resources  location="/resources/"  mapping="/resource/**"/> 
+	<bean id= "errormessageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+   		<property name="basename" value="errormessages"/> 
+	</bean>
+	
+	<!-- <mvc:resources  location="/resources/"  mapping="/resource/**"/>  -->
 	
 	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 	  <property name="maxUploadSize" value="10240000"/>
@@ -56,7 +60,7 @@
 </bean-->
 	
 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-		<property name="validationMessageSource" ref="messageSource" />
+		<property name="validationMessageSource" ref="errormessageSource" />
 	</bean>
  
  	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">

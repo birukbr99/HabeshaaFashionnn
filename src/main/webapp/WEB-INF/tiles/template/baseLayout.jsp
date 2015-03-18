@@ -13,10 +13,11 @@
 
 <title><tiles:insertAttribute name="title" /></title>
 
-<link href="<c:url value='/resources/css/navigation.css' />" rel="stylesheet" />
-<script type="text/javascript" src="<c:url value='/resources/javascript/navigation.js' />"></script>
-<link href="<c:url value='/resources/css/layout.css' />" rel="stylesheet" />
-<link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
+<link href="<c:url value='/resource/css/navigation.css' />" rel="stylesheet" />
+<script type="text/javascript" src="<c:url value='/resource/javascript/navigation.js' />"></script>
+<link href="<c:url value='/resource/css/layout.css' />" rel="stylesheet" />
+<link href="<c:url value="/resource/css/form.css" />" rel="stylesheet">
+<link href="<c:url value="/resource/css/error.css" />" rel="stylesheet">
 
 </head>
 
