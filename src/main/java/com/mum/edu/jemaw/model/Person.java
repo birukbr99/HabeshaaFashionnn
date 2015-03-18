@@ -44,9 +44,24 @@ public class Person {
 	@NotEmpty(message="Enter Usernamce")
 	@Size(min=6,max=10,message="Username must be between 6 and 10")
 	private String username;
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	@NotEmpty(message="Enter Password")
 	@Size(min=6,max=10,message="Password must be between 8 and 10")
 	private String password;
+	
+	
+	
 	
 	public Long getId() {
 		return id;
